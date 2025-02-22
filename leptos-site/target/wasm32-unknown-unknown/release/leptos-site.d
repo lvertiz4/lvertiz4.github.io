@@ -1,0 +1,1 @@
+/Users/lvertiz/Documents/Rust/personal_website/lvertiz4.github.io/leptos-site/target/wasm32-unknown-unknown/release/leptos-site.wasm: /Users/lvertiz/Documents/Rust/personal_website/lvertiz4.github.io/leptos-site/src/main.rs

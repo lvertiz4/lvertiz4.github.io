@@ -1,0 +1,10 @@
+/Users/lvertiz/Documents/Rust/personal_website/lvertiz4.github.io/leptos-site/target/wasm32-unknown-unknown/release/deps/libthiserror-10a5497ef67be486.rmeta: /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.11/src/lib.rs /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.11/src/aserror.rs /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.11/src/display.rs /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.11/src/var.rs
+
+/Users/lvertiz/Documents/Rust/personal_website/lvertiz4.github.io/leptos-site/target/wasm32-unknown-unknown/release/deps/libthiserror-10a5497ef67be486.rlib: /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.11/src/lib.rs /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.11/src/aserror.rs /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.11/src/display.rs /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.11/src/var.rs
+
+/Users/lvertiz/Documents/Rust/personal_website/lvertiz4.github.io/leptos-site/target/wasm32-unknown-unknown/release/deps/thiserror-10a5497ef67be486.d: /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.11/src/lib.rs /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.11/src/aserror.rs /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.11/src/display.rs /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.11/src/var.rs
+
+/Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.11/src/lib.rs:
+/Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.11/src/aserror.rs:
+/Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.11/src/display.rs:
+/Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.11/src/var.rs:

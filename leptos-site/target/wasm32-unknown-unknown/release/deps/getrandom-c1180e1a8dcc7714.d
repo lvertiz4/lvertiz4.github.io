@@ -1,0 +1,10 @@
+/Users/lvertiz/Documents/Rust/personal_website/lvertiz4.github.io/leptos-site/target/wasm32-unknown-unknown/release/deps/libgetrandom-c1180e1a8dcc7714.rmeta: /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.2.15/src/lib.rs /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.2.15/src/error.rs /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.2.15/src/util.rs /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.2.15/src/js.rs
+
+/Users/lvertiz/Documents/Rust/personal_website/lvertiz4.github.io/leptos-site/target/wasm32-unknown-unknown/release/deps/libgetrandom-c1180e1a8dcc7714.rlib: /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.2.15/src/lib.rs /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.2.15/src/error.rs /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.2.15/src/util.rs /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.2.15/src/js.rs
+
+/Users/lvertiz/Documents/Rust/personal_website/lvertiz4.github.io/leptos-site/target/wasm32-unknown-unknown/release/deps/getrandom-c1180e1a8dcc7714.d: /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.2.15/src/lib.rs /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.2.15/src/error.rs /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.2.15/src/util.rs /Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.2.15/src/js.rs
+
+/Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.2.15/src/lib.rs:
+/Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.2.15/src/error.rs:
+/Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.2.15/src/util.rs:
+/Users/lvertiz/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.2.15/src/js.rs:
