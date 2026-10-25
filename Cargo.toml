@@ -1,0 +1,77 @@
+[package]
+name = "portfolio"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+# Future interactive demos will live in their own wasm crates under demos/.
+# Add them here as workspace members when they exist, e.g. members = ["demos/*"].
+[workspace]
+
+[lib]
+# cdylib: the wasm bundle the browser loads.  rlib: lets main.rs link the same code.
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+leptos = { version = "0.8", default-features = false }
+leptos_router = { version = "0.8" }
+leptos_meta = { version = "0.8" }
+
+# Browser-only (hydrate feature).
+# wasm-bindgen: the #[wasm_bindgen] attribute that exports `hydrate()` to JavaScript.
+# console_error_panic_hook: prints Rust panic messages to the browser console instead
+# of a bare "RuntimeError: unreachable".
+wasm-bindgen = { version = "0.2", optional = true }
+console_error_panic_hook = { version = "0.1", optional = true }
+
+# Server-only (ssr feature): used by main.rs to pre-render pages and run the dev server.
+leptos_axum = { version = "0.8", optional = true }
+axum = { version = "0.8", optional = true }
+tokio = { version = "1", features = ["rt-multi-thread", "macros"], optional = true }
+
+[features]
+# Pure client-side rendering (no pre-rendered HTML). Unused today; kept so the
+# crate can be built as a plain CSR app for experiments.
+csr = ["leptos/csr"]
+# The wasm bundle: attaches to HTML that was already rendered at build time.
+hydrate = ["leptos/hydrate", "dep:wasm-bindgen", "dep:console_error_panic_hook"]
+# The native binary: renders every route to HTML and writes it to disk.
+ssr = [
+  "dep:axum",
+  "dep:tokio",
+  "dep:leptos_axum",
+  "leptos/ssr",
+  "leptos_meta/ssr",
+  "leptos_router/ssr",
+]
+
+# Smaller, slower-to-compile wasm for release builds (selected below via lib-profile-release).
+[profile.wasm-release]
+inherits = "release"
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[package.metadata.leptos]
+# Base name of the JS/wasm/CSS files in <site-root>/<site-pkg-dir>/.
+output-name = "portfolio"
+# Everything cargo-leptos emits, plus the pre-rendered HTML, lands here.
+# WARNING: cargo-leptos wipes this directory on every build.
+site-root = "dist"
+site-pkg-dir = "pkg"
+# Plain CSS; cargo-leptos minifies it with Lightning CSS.
+style-file = "style/main.css"
+# Copied verbatim into <site-root>/.
+assets-dir = "assets"
+# Dev server address for `cargo leptos watch`.
+site-addr = "127.0.0.1:3000"
+reload-port = 3001
+browserquery = "defaults"
+env = "DEV"
+# Which features each half of the build uses.
+bin-features = ["ssr"]
+bin-default-features = false
+lib-features = ["hydrate"]
+lib-default-features = false
+lib-profile-release = "wasm-release"

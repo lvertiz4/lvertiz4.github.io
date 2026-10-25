@@ -1,0 +1,8 @@
+# Cargo build output
+/target
+
+# Generated site (wasm, JS, CSS and pre-rendered HTML). CI rebuilds it on every deploy.
+/dist
+
+# Editor noise
+.DS_Store

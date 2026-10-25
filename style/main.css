@@ -1,0 +1,182 @@
+/* Plain CSS, bundled and minified by cargo-leptos into /pkg/portfolio.css. */
+
+:root {
+  --bg: #fdfdfc;
+  --fg: #1c1c1a;
+  --muted: #5f5f5a;
+  --accent: #b7410e; /* rust */
+  --card: #ffffff;
+  --border: #e3e3df;
+  --max-width: 64rem;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15161a;
+    --fg: #ecece9;
+    --muted: #a3a39d;
+    --accent: #f0864a;
+    --card: #1d1f24;
+    --border: #2d3037;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.55;
+  color: var(--fg);
+  background: var(--bg);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
+main,
+.site-header,
+.site-footer {
+  width: min(100% - 2rem, var(--max-width));
+  margin-inline: auto;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 2rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.site-header__name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--fg);
+}
+.site-header__tagline {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+}
+.site-nav {
+  display: flex;
+  gap: 1.25rem;
+}
+.site-nav a[aria-current="page"] {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* Landing page */
+.page-intro h1 {
+  margin-bottom: 0.25rem;
+}
+.page-intro p {
+  margin-top: 0;
+  color: var(--muted);
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 1.25rem;
+  margin-block: 1.5rem 3rem;
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.25rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+.project-card__title {
+  margin: 0;
+  font-size: 1.15rem;
+}
+.project-card__summary {
+  margin: 0;
+  color: var(--muted);
+  flex: 1;
+}
+.project-card__links,
+.project__links {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+}
+
+/* Tech tags */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tech-tag {
+  padding: 0.1rem 0.6rem;
+  font-size: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+}
+
+/* Project page */
+.project__header {
+  margin-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.project__header h1,
+.project__summary {
+  margin: 0;
+}
+.project__summary {
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+.project__section h2 {
+  margin-bottom: 0.25rem;
+}
+.project__section p {
+  margin-top: 0;
+}
+.demo-mount {
+  display: grid;
+  place-items: center;
+  min-height: 12rem;
+  margin-block: 1rem 2rem;
+  border: 1px dashed var(--border);
+  border-radius: 0.75rem;
+}
+.demo-mount__placeholder {
+  color: var(--muted);
+}
+
+/* Prose pages (About, 404) */
+.prose {
+  max-width: 42rem;
+  margin-block: 2rem 3rem;
+}
+
+/* Footer */
+.site-footer {
+  padding-block: 1.5rem 2.5rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
