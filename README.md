@@ -22,13 +22,18 @@ src/projects.rs         project data: a `static` slice of structs
 src/pages/              one component per route (home, project, about, 404)
 src/components/         header, footer, project card, tech tags
 style/main.css          plain CSS -> dist/pkg/portfolio.css
+demos/<slug>/           one small wasm crate per interactive demo (workspace members)
 assets/                 copied verbatim into dist/ (.nojekyll, favicon)
 .github/workflows/      build + deploy to GitHub Pages
 dist/                   generated output (git-ignored)
 ```
 
-Future interactive demos are meant to live as separate wasm crates under
-`demos/`, added as workspace members in `Cargo.toml`.
+Interactive demos live as separate wasm crates under `demos/`, picked up as
+workspace members by `members = ["demos/*"]` in `Cargo.toml`. Each demo is a
+thin wrapper that depends on the project's own repository as a git
+dependency (for example `demos/saga-executor/` depends on `saga-core` from
+<https://github.com/lvertiz4/saga-executor>), so the library stays in one
+place and this repo only holds the browser glue.
 
 ## Prerequisites
 

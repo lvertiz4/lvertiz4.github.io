@@ -4,9 +4,11 @@ version = "0.1.0"
 edition = "2021"
 publish = false
 
-# Future interactive demos will live in their own wasm crates under demos/.
-# Add them here as workspace members when they exist, e.g. members = ["demos/*"].
+# Interactive demos are separate wasm crates under demos/, one per project.
+# They are workspace members so they share this Cargo.lock and target/.
+# Each demo depends on its project's library from that project's own repo.
 [workspace]
+members = ["demos/*"]
 
 [lib]
 # cdylib: the wasm bundle the browser loads.  rlib: lets main.rs link the same code.

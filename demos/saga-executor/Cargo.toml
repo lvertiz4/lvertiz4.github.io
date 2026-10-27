@@ -1,0 +1,18 @@
+[package]
+name = "saga-executor-demo"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+# cdylib: the wasm bundle a loader script will mount into the project page.
+# rlib: lets `cargo test` link the same code natively.
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+# The state machine being demonstrated. Phase 1 lives in its own repository;
+# Cargo.lock pins the exact commit, so builds stay reproducible until you run
+# `cargo update -p saga-core` to pull newer work from that repo.
+saga-core = { git = "https://github.com/lvertiz4/saga-executor", branch = "main" }
+# Exports `run_linear_saga` to JavaScript. Same crate the portfolio already uses.
+wasm-bindgen = "0.2"
